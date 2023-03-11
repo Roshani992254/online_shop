@@ -1,0 +1,19 @@
+{% include 'base.html' %}
+
+{% block content %}
+
+    <p>Customer Page</p>
+    <form method="POST" enctype="multipart/form-data">
+ 
+		{% csrf_token %}
+	<table>
+		{{ form.as_table }}
+    
+	</table>
+ 		<button type="submit">OK</button>
+  </div>
+  
+  
+</form>
+
+{% endblock %}

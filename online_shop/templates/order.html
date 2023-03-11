@@ -1,0 +1,44 @@
+{% include 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<p>Order Page</p>
+
+    		<div>
+                	<form method="POST" enctype="multipart/form-data">
+						{% csrf_token %}
+						<table>
+							{{ form.as_table }}
+							{{Customer.id}}
+							{{product.name}} 
+							<button class="btn btn-primary px-4 ms-3">order</button>
+						</table>
+						
+					</form>
+                    <!-- <span >{{Customer.id}}</span> -->
+                    
+                    
+					<!-- <div>
+					    
+						<img src="{{ product.image.url}}" alt="" style="width: 300px; height: 400px;">
+					</div> -->
+					    
+					<!-- <div>
+					    <h3>{{product.name}} </h3>
+					    
+					    <br>
+					</div> -->
+
+
+                    <!-- <div class="buttons">
+                        <button class="btn btn-primary px-4 ms-3">order</button>
+                    </div> -->
+                    
+                    
+                </div>
+                
+               
+                
+{% endblock %}
